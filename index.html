@@ -29,6 +29,22 @@
             transition: transform 0.3s ease-in-out;
         }
 
+        .skill-category {
+            margin-bottom: 40px;
+        }
+
+        .skill-category h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
         .project-box {
             background-color: #212121;
             /* Dark Gray */
@@ -99,8 +115,10 @@
     <section id="intro" class="section" style="background-image: url('https://source.unsplash.com/1600x900/?code');">
         <div class="container text-center">
             <h1 class="text-4xl md:text-6xl font-bold">Welcome to My Portfolio</h1>
-            <p class="text-lg mt-4 md:text-xl">I am a junior data scientist passionate about utilizing data to drive
-                insights and make informed decisions. Take a look at my projects below!</p>
+            <p class="text-lg mt-4 md:text-xl">I am a junior data scientist with a passion for leveraging data to solve
+                real-world problems. My goal is to utilize advanced analytics and machine learning techniques to extract
+                valuable insights from complex datasets.</p>
+            <p class="text-lg mt-4 md:text-xl">Explore my skills and projects below!</p>
         </div>
     </section>
 
@@ -109,35 +127,72 @@
         style="background-image: url('https://source.unsplash.com/1600x900/?technology');">
         <div class="container">
             <h2 class="text-center text-3xl font-bold mb-8">Skills</h2>
-            <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <a href="#" class="svg-link">
-                        <img class="h-16 w-16 mx-auto mb-4" src="https://img.icons8.com/fluent/48/000000/python.png"
-                            alt="Python">
-                    </a>
-                    <h4 class="mt-4">Python</h4>
-                </div>
-                <!-- Add more skills -->
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section"
-        style="background-image: url('https://source.unsplash.com/1600x900/?work');">
-        <div class="container">
-            <h2 class="text-center text-3xl font-bold mb-8">Experience</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h4 class="text-xl font-bold">Data Analyst Intern</h4>
-                    <p class="mt-2">ABC Company</p>
-                    <p class="mt-2">June 2022 - August 2022</p>
-                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur dolor vel
-                        tortor accumsan, sed auctor mauris laoreet. Nullam sed metus eu elit tempus fermentum vel eu
-                        lorem. Vestibulum lobortis est eu pulvinar fermentum.</p>
+            <!-- Machine Learning Skills -->
+            <div class="skill-category">
+                <h3>Machine Learning</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 text-center mb-4">
+                        <img class="skill-icon" src="https://img.icons8.com/color/96/000000/machine-learning.png"
+                            alt="Machine Learning">
+                        <h4 class="mt-4">Machine Learning</h4>
+                    </div>
+                    <!-- Add more ML skills -->
                 </div>
-                <!-- Add more experiences -->
             </div>
+
+            <!-- Computer Vision Skills -->
+            <div class="skill-category">
+                <h3>Computer Vision</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 text-center mb-4">
+                        <img class="skill-icon" src="https://img.icons8.com/color/96/000000/artificial-intelligence.png"
+                            alt="Computer Vision">
+                        <h4 class="mt-4">Computer Vision</h4>
+                    </div>
+                    <!-- Add more CV skills -->
+                </div>
+            </div>
+
+            <!-- Data Analysis Skills -->
+            <div class="skill-category">
+                <h3>Data Analysis</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 text-center mb-4">
+                        <img class="skill-icon" src="https://img.icons8.com/ios/100/000000/data-configuration.png"
+                            alt="Data Analysis">
+                        <h4 class="mt-4">Data Analysis</h4>
+                    </div>
+                    <!-- Add more Data Analysis skills -->
+                </div>
+            </div>
+
+            <!-- Power BI Skills -->
+            <div class="skill-category">
+                <h3>Power BI</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 text-center mb-4">
+                        <img class="skill-icon" src="https://img.icons8.com/color/96/000000/power-bi.png"
+                            alt="Power BI">
+                        <h4 class="mt-4">Power BI</h4>
+                    </div>
+                    <!-- Add more Power BI skills -->
+                </div>
+            </div>
+
+            <!-- IoT Skills -->
+            <div class="skill-category">
+                <h3>IoT</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 text-center mb-4">
+                        <img class="skill-icon" src="https://img.icons8.com/color/96/000000/internet-of-things.png"
+                            alt="IoT">
+                        <h4 class="mt-4">IoT</h4>
+                    </div>
+                    <!-- Add more IoT skills -->
+                </div>
+            </div>
+
         </div>
     </section>
 
