@@ -6,90 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junior Data Scientist Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #373737;
+            /* Dark Gray */
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .section {
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+        }
+
+        .svg-link:hover svg {
+            transform: rotate(90deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-box {
+            background-color: #212121;
+            /* Dark Gray */
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-box .card-title {
+            color: white;
+        }
+
+        .project-box .card-text {
+            color: #BDBDBD;
+            /* Light Gray */
+        }
+
+        .project-box .btn {
+            background-color: #4CAF50;
+            /* Green */
+            border-color: #4CAF50;
+            /* Green */
+        }
+
+        .project-box .btn:hover {
+            background-color: #45a049;
+            /* Darker Green */
+            border-color: #45a049;
+            /* Darker Green */
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Introduction Section -->
-    <section id="intro" class="py-5 bg-light">
+    <section id="intro" class="section" style="background-image: url('https://source.unsplash.com/1600x900/?code');">
         <div class="container text-center">
-            <h2 class="display-4 mb-4">Welcome to My Portfolio</h2>
-            <p class="lead">I am a junior data scientist passionate about utilizing data to drive insights and make
-                informed decisions. Take a look at my projects below!</p>
+            <h1 class="text-4xl md:text-6xl font-bold">Welcome to My Portfolio</h1>
+            <p class="text-lg mt-4 md:text-xl">I am a junior data scientist passionate about utilizing data to drive
+                insights and make informed decisions. Take a look at my projects below!</p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5">
+    <section id="skills" class="section"
+        style="background-image: url('https://source.unsplash.com/1600x900/?technology');">
         <div class="container">
-            <h2 class="text-center mb-4">Skills</h2>
+            <h2 class="text-center text-3xl font-bold mb-8">Skills</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <h4>Programming Languages</h4>
-                    <ul>
-                        <li>Python</li>
-                        <li>R</li>
-                        <li>SQL</li>
-                    </ul>
+                <div class="col-md-4 text-center mb-4">
+                    <a href="#" class="svg-link">
+                        <img class="h-16 w-16 mx-auto mb-4" src="https://img.icons8.com/fluent/48/000000/python.png"
+                            alt="Python">
+                    </a>
+                    <h4 class="mt-4">Python</h4>
                 </div>
-                <div class="col-md-4">
-                    <h4>Data Analysis</h4>
-                    <ul>
-                        <li>Pandas</li>
-                        <li>Numpy</li>
-                        <li>Matplotlib</li>
-                    </ul>
+                <!-- Add more skills -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section"
+        style="background-image: url('https://source.unsplash.com/1600x900/?work');">
+        <div class="container">
+            <h2 class="text-center text-3xl font-bold mb-8">Experience</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="text-xl font-bold">Data Analyst Intern</h4>
+                    <p class="mt-2">ABC Company</p>
+                    <p class="mt-2">June 2022 - August 2022</p>
+                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur dolor vel
+                        tortor accumsan, sed auctor mauris laoreet. Nullam sed metus eu elit tempus fermentum vel eu
+                        lorem. Vestibulum lobortis est eu pulvinar fermentum.</p>
                 </div>
-                <div class="col-md-4">
-                    <h4>Machine Learning</h4>
-                    <ul>
-                        <li>Scikit-Learn</li>
-                        <li>TensorFlow</li>
-                        <li>Keras</li>
-                    </ul>
-                </div>
+                <!-- Add more experiences -->
             </div>
         </div>
     </section>
 
     <!-- GitHub Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section id="projects" class="section"
+        style="background-image: url('https://source.unsplash.com/1600x900/?programming');">
         <div class="container">
-            <h2 class="text-center mb-4">GitHub Projects</h2>
-            <div id="projects-list" class="list-group">
+            <h2 class="text-center text-3xl font-bold mb-8">GitHub Projects</h2>
+            <div id="project-grid" class="row justify-content-center">
                 <!-- GitHub projects will be dynamically loaded here -->
+            </div>
+            <div class="text-center mt-8">
+                <button id="loadMore" class="btn btn-primary rounded-pill px-4 py-2">Load More</button>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <p class="text-center">Feel free to reach out!</p>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                    </form>
-                </div>
-            </div>
+    <section id="contact" class="section"
+        style="background-image: url('https://source.unsplash.com/1600x900/?communication');">
+        <div class="container text-center">
+            <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+            <p class="contact-icons flex justify-center">
+                <a href="mailto:youremail@example.com" class="svg-link"><img
+                        src="https://img.icons8.com/fluent/48/000000/email.png" alt="Email"></a>
+                <a href="https://www.linkedin.com/yourprofile" target="_blank" class="svg-link"><img
+                        src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+                <a href="tel:+1234567890" class="svg-link"><img
+                        src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"></a>
+            </p>
         </div>
     </section>
 
@@ -104,23 +182,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Fetch GitHub Projects -->
     <script>
         $(document).ready(function () {
             var username = 'abwahab175';
             var url = 'https://api.github.com/users/' + username + '/repos?type=owner&sort=updated';
+            var projectsDisplayed = 0;
+            var projectsPerPage = 4;
 
-            $.getJSON(url, function (data) {
-                $.each(data, function (index, item) {
-                    if (index < 5) { // Display only the first 5 projects
-                        $('#projects-list').append('<a href="' + item.html_url + '" class="list-group-item list-group-item-action">' + item.name + '</a>');
+            function loadProjects() {
+                $.getJSON(url, function (data) {
+                    for (var i = projectsDisplayed; i < Math.min(data.length, projectsDisplayed + projectsPerPage); i++) {
+                        var projectBox = '<div class="col-md-6 mb-4"><div class="card project-box"><div class="card-body">';
+                        projectBox += '<h4 class="card-title">' + data[i].name + '</h4>';
+                        projectBox += '<p class="card-text">' + (data[i].description ? data[i].description : 'No description available') + '</p>';
+                        projectBox += '<a href="' + data[i].html_url + '" class="btn btn-primary">View Project</a>';
+                        projectBox += '</div></div></div>';
+                        $('#project-grid').append(projectBox);
+                    }
+                    projectsDisplayed += projectsPerPage;
+                    if (projectsDisplayed >= data.length) {
+                        $('#loadMore').hide();
                     }
                 });
+            }
+
+            loadProjects();
+
+            $('#loadMore').click(function () {
+                loadProjects();
             });
         });
     </script>
-
 </body>
 
 </html>
