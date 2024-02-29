@@ -1,1 +1,126 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-4 mb-4">Welcome to My Portfolio</h2>
+            <p class="lead">I am a junior data scientist passionate about utilizing data to drive insights and make
+                informed decisions. Take a look at my projects below!</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Data Analysis</h4>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>Numpy</li>
+                        <li>Matplotlib</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li>Scikit-Learn</li>
+                        <li>TensorFlow</li>
+                        <li>Keras</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">GitHub Projects</h2>
+            <div id="projects-list" class="list-group">
+                <!-- GitHub projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <p class="text-center">Feel free to reach out!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Junior Data Scientist Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Fetch GitHub Projects -->
+    <script>
+        $(document).ready(function () {
+            var username = 'abwahab175';
+            var url = 'https://api.github.com/users/' + username + '/repos?type=owner&sort=updated';
+
+            $.getJSON(url, function (data) {
+                $.each(data, function (index, item) {
+                    if (index < 5) { // Display only the first 5 projects
+                        $('#projects-list').append('<a href="' + item.html_url + '" class="list-group-item list-group-item-action">' + item.name + '</a>');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
